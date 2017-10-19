@@ -203,6 +203,14 @@ body {
   overflow-y:scroll;
 }
 
+.myteamline {
+  color: blue;
+}
+
+.oppoteamline {
+  color: red; 
+}
+
 .plays h6 {
   margin: 0 0 0 5px;
 }
