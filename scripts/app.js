@@ -104,7 +104,7 @@ function countdown(minutes) {
         var current_minutes = mins-1
         seconds--;
         counter.html('');
-        counter.append('<h1>'+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+'</h1>');
+        counter.prepend('<h1>'+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+'</h1>');
         if( seconds > 0 ) {
           setTimeout(tick, 1000);
           $('.score').html('');
@@ -115,57 +115,62 @@ function countdown(minutes) {
               if ((Math.round(Math.random() *10) * atkv1) >= 2.5) {
                 myTeamStats1[1]+=2;
                 myScore+=2;
+                $('.plays').prepend('<h6>'+myTeam[0].name+' made the shot! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
               else {
-                $('.plays').append('<h6>'+myTeam[0].name+' miss the shot! </h6>');
+                $('.plays').prepend('<h6>'+myTeam[0].name+' missed! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
             }
             else if (Math.round(Math.random() *10) === 2 || Math.round(Math.random() *10) === 3) {
               if ((Math.round(Math.random() *10) * atkv2) >= 2.5) {
                 myTeamStats2[1]+=2;
                 myScore+=2;
+                $('.plays').prepend('<h6>'+myTeam[1].name+' made the shot! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
               else {
-                $('.plays').append('<h6>'+myTeam[1].name+' miss the shot! </h6>');
+                $('.plays').prepend('<h6>'+myTeam[1].name+' missed! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
             }
             else if (Math.round(Math.random() *10) === 4 || Math.round(Math.random() *10) === 5) {
               if ((Math.round(Math.random() *10) * atkv3) >= 2.5) {
                 myTeamStats3[1]+=2;
                 myScore+=2;
+                $('.plays').prepend('<h6>'+myTeam[2].name+' made the shot! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
               else {
-                $('.plays').append('<h6>'+myTeam[2].name+' miss the shot! </h6>');
+                $('.plays').prepend('<h6>'+myTeam[2].name+' missed! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
             }
             else if (Math.round(Math.random() *10) === 6 || Math.round(Math.random() *10) === 7) {
               if ((Math.round(Math.random() *10) * atkv4) >= 2.5) {
                 myTeamStats4[1]+=2;
                 myScore+=2;
+                $('.plays').prepend('<h6>'+myTeam[3].name+' made the shot! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
               else {
-                $('.plays').append('<h6>'+myTeam[3].name+' miss the shot! </h6>');
+                $('.plays').prepend('<h6>'+myTeam[3].name+' missed! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
             }
             else if (Math.round(Math.random() *10) === 8 || Math.round(Math.random() *10) === 9) {
               if ((Math.round(Math.random() *10) * atkv5) >= 2.5) {
                 myTeamStats5[1]+=2;
                 myScore+=2;
+                $('.plays').prepend('<h6>'+myTeam[4].name+' made the shot! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
               else {
-                $('.plays').append('<h6>'+myTeam[4].name+' miss the shot! </h6>');
+                $('.plays').prepend('<h6>'+myTeam[4].name+' missed! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
             }
             else {
-              $('.plays').append('<h6> omg! </h6>');
+              $('.plays').prepend('<h6> omg! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
             }
             $('.stats1').html('');
-            $('.stats1').append('<h3>'+ myTeamStats1[0] + ' : ' + myTeamStats1[1] +'</h3>');
-            $('.stats1').append('<h3>'+ myTeamStats2[0] + ' : ' + myTeamStats2[1] +'</h3>');
-            $('.stats1').append('<h3>'+ myTeamStats3[0] + ' : ' + myTeamStats3[1] +'</h3>');
-            $('.stats1').append('<h3>'+ myTeamStats4[0] + ' : ' + myTeamStats4[1] +'</h3>');
-            $('.stats1').append('<h3>'+ myTeamStats5[0] + ' : ' + myTeamStats5[1] +'</h3>');
-            $('.score').append("<span class = 'boxScore'>"+myScore+'</span>' + ' : ' + "<span class = 'boxScore'>"+oppoScore+'</span>');
+            $('.stats1').prepend('<h3>'+ myTeamStats1[0] + ' : ' + myTeamStats1[1] +'</h3>');
+            $('.stats1').prepend('<h3>'+ myTeamStats2[0] + ' : ' + myTeamStats2[1] +'</h3>');
+            $('.stats1').prepend('<h3>'+ myTeamStats3[0] + ' : ' + myTeamStats3[1] +'</h3>');
+            $('.stats1').prepend('<h3>'+ myTeamStats4[0] + ' : ' + myTeamStats4[1] +'</h3>');
+            $('.stats1').prepend('<h3>'+ myTeamStats5[0] + ' : ' + myTeamStats5[1] +'</h3>');
+            $('.score').prepend("<span class = 'boxScore'>"+myScore+'</span>' + ' : ' + "<span class = 'boxScore'>"+oppoScore+'</span>');
 
             ball = 1;
           }
@@ -174,57 +179,62 @@ function countdown(minutes) {
               if ((Math.round(Math.random() *10) * atkv6) >= 2.5) {
                 oppoTeamStats1[1]+=2;
                 oppoScore+=2;
+                $('.plays').prepend('<h6>'+oppoTeam[0].name+' made the shot! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
               else {
-                $('.plays').append('<h6>'+oppoTeam[0].name+' miss the shot! </h6>');
+                $('.plays').prepend('<h6>'+oppoTeam[0].name+' missed! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
             }
             else if (Math.round(Math.random() *10) === 2 || Math.round(Math.random() *10) === 3) {
               if ((Math.round(Math.random() *10) * atkv7) >= 2.5) {
                 oppoTeamStats2[1]+=2;
                 oppoScore+=2;
+                $('.plays').prepend('<h6>'+oppoTeam[1].name+' made the shot! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
               else {
-                $('.plays').append('<h6>'+oppoTeam[1].name+' miss the shot! </h6>');
+                $('.plays').prepend('<h6>'+oppoTeam[1].name+' missed! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
             }
             else if (Math.round(Math.random() *10) === 4 || Math.round(Math.random() *10) === 5) {
               if ((Math.round(Math.random() *10) * atkv8) >= 2.5) {
                 oppoTeamStats3[1]+=2;
                 oppoScore+=2;
+                $('.plays').prepend('<h6>'+oppoTeam[2].name+' made the shot! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
               else {
-                $('.plays').append('<h6>'+oppoTeam[2].name+' miss the shot! </h6>');
+                $('.plays').prepend('<h6>'+oppoTeam[2].name+' missed! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
             }
             else if (Math.round(Math.random() *10) === 6 || Math.round(Math.random() *10) === 7) {
               if ((Math.round(Math.random() *10) * atkv9) >= 2.5) {
                 oppoTeamStats4[1]+=2;
                 oppoScore+=2;
+                $('.plays').prepend('<h6>'+oppoTeam[3].name+' made the shot! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
               else {
-                $('.plays').append('<h6>'+oppoTeam[3].name+' miss the shot! </h6>');
+                $('.plays').prepend('<h6>'+oppoTeam[3].name+' missed! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
             }
             else if (Math.round(Math.random() *10) === 8 || Math.round(Math.random() *10) === 9) {
               if ((Math.round(Math.random() *10) * atkv10) >= 2.5) {
                 oppoTeamStats5[1]+=2;
                 oppoScore+=2;
+                $('.plays').prepend('<h6>'+oppoTeam[4].name+' made the shot! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
               else {
-                $('.plays').append('<h6>'+oppoTeam[4].name+' miss the shot! </h6>');
+                $('.plays').prepend('<h6>'+oppoTeam[4].name+' missed! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
               }
             }
             else {
-              $('.plays').append('<h6> oppo omg! </h6>');
+              $('.plays').prepend('<h6> oppo omg! ['+current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds)+']</h6>');
             }
             $('.stats2').html('');
-            $('.stats2').append('<h3>'+ oppoTeamStats1[0] + ' : ' + oppoTeamStats1[1] +'</h3>');
-            $('.stats2').append('<h3>'+ oppoTeamStats2[0] + ' : ' + oppoTeamStats2[1] +'</h3>');
-            $('.stats2').append('<h3>'+ oppoTeamStats3[0] + ' : ' + oppoTeamStats3[1] +'</h3>');
-            $('.stats2').append('<h3>'+ oppoTeamStats4[0] + ' : ' + oppoTeamStats4[1] +'</h3>');
-            $('.stats2').append('<h3>'+ oppoTeamStats5[0] + ' : ' + oppoTeamStats5[1] +'</h3>');
-            $('.score').append("<span class = 'boxScore'>"+myScore+'</span>' + ' : ' + "<span class = 'boxScore'>"+oppoScore+'</span>');
+            $('.stats2').prepend('<h3>'+ oppoTeamStats1[0] + ' : ' + oppoTeamStats1[1] +'</h3>');
+            $('.stats2').prepend('<h3>'+ oppoTeamStats2[0] + ' : ' + oppoTeamStats2[1] +'</h3>');
+            $('.stats2').prepend('<h3>'+ oppoTeamStats3[0] + ' : ' + oppoTeamStats3[1] +'</h3>');
+            $('.stats2').prepend('<h3>'+ oppoTeamStats4[0] + ' : ' + oppoTeamStats4[1] +'</h3>');
+            $('.stats2').prepend('<h3>'+ oppoTeamStats5[0] + ' : ' + oppoTeamStats5[1] +'</h3>');
+            $('.score').prepend("<span class = 'boxScore'>"+myScore+'</span>' + ' : ' + "<span class = 'boxScore'>"+oppoScore+'</span>');
             ball =0;
           }
         }

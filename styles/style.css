@@ -200,6 +200,7 @@ body {
   height: 20%;
   width: 100%;
   background-color: white;
+  overflow-y:scroll;
 }
 
 .plays h6 {
