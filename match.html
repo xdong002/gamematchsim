@@ -9,9 +9,22 @@
     <link rel="stylesheet" href="styles/style.css">
 
     <!-- VENDOR SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" ></script>
 
     <!-- APPLICATION SCRIPTS -->
+    <!-- <script>
+    var id ;
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+    function dragStart(ev) {
+      id = ev.target.id;
+    }
+    function drop(ev) {
+      ev.target.append(document.getElementById(id));
+    }
+  </script> -->
+
     <script src="scripts/app.js"></script>
   </head>
   <body>
@@ -32,38 +45,43 @@
       <div class="ourTeam">
 
         <div class="lineup lineup1">
-          <img src="images/lebron.png" alt="" class="playerBox positionC" >
+          <img src="images/lebron.png" alt="" class="playerBox">
           <span class="statsBox statsBox1">Player:James
             ATK:98
             DEF:98</span>
+          <h1 class = "adding"></h1>
           </div>
 
         <div class="lineup lineup2">
-          <img src="images/kevin.png" alt="" class="playerBox positionPF">
+          <img src="images/kevin.png" alt="" class="playerBox">
           <span class="statsBox statsBox2">Player:kevin
             ATK:99
             DEF:92</span>
+          <h1 class = "adding"></h1>
         </div>
 
         <div class="lineup lineup3">
-          <img src="images/westbrook.png" alt="" class="playerBox positionSF">
+          <img src="images/westbrook.png" alt="" class="playerBox">
           <span class="statsBox statsBox3">Player:westbrook
             ATK:94
             DEF:90</span>
+          <h1 class = "adding"></h1>
         </div>
 
         <div class="lineup lineup4">
-          <img src="images/harden.png" alt="" class="playerBox positionSG">
+          <img src="images/harden.png" alt="" class="playerBox">
           <span class="statsBox statsBox4">Player:harden
             ATK:95
             DEF:80</span>
+          <h1 class = "adding"></h1>
         </div>
 
         <div class="lineup lineup5">
-          <img src="images/curry.png" alt="" class="playerBox positionPG">
+          <img src="images/curry.png" alt="" class="playerBox">
           <span class="statsBox statsBox5">Player:curry
             ATK:98
             DEF:88</span>
+          <h1 class = "adding"></h1>
         </div>
 
       </div>
@@ -87,38 +105,43 @@
       <div class="oppoTeam">
 
         <div class="lineup lineup6">
-          <img src="images/lebron.png" alt="" class="playerBoxoppo positionCoppo" >
+          <img src="images/lebron.png" alt="" class="playerBoxoppo" >
           <span class="statsBox statsBox6">Player:James
             ATK:98
             DEF:98</span>
+          <h1 class = "adding"></h1>
           </div>
 
         <div class="lineup lineup7">
-          <img src="images/kevin.png" alt="" class="playerBoxoppo positionPFoppo">
+          <img src="images/kevin.png" alt="" class="playerBoxoppo">
           <span class="statsBox statsBox7">Player:kevin
             ATK:99
             DEF:92</span>
+          <h1 class = "adding"></h1>
         </div>
 
         <div class="lineup lineup8">
-          <img src="images/westbrook.png" alt="" class="playerBoxoppo positionSFoppo">
+          <img src="images/westbrook.png" alt="" class="playerBoxoppo">
           <span class="statsBox statsBox8">Player:westbrook
             ATK:94
             DEF:90</span>
+          <h1 class = "adding"></h1>
         </div>
 
         <div class="lineup lineup9">
-          <img src="images/harden.png" alt="" class="playerBoxoppo positionSGoppo">
+          <img src="images/harden.png" alt="" class="playerBoxoppo">
           <span class="statsBox statsBox9">Player:harden
             ATK:95
             DEF:80</span>
+          <h1 class = "adding"></h1>
         </div>
 
         <div class="lineup lineup10">
-          <img src="images/curry.png" alt="" class="playerBoxoppo positionPGoppo">
+          <img src="images/curry.png" alt="" class="playerBoxoppo">
           <span class="statsBox statsBox10">Player:curry
             ATK:98
             DEF:88</span>
+          <h1 class = "adding"></h1>
         </div>
       </div>
 
@@ -127,5 +150,6 @@
       </div>
 
     </div>
+
   </body>
 </html>
